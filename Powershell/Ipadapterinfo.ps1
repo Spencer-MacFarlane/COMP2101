@@ -5,5 +5,5 @@ get-ciminstance win32_networkadapterconfiguration |
                @{n="ipaddress v4, v6"; e={$_.ipaddress}},
                ipsubnet,
                dnsdomain,
-               dnsserversearchorder|
+               @{n="DNS Addresses"; e={$_.dnsserversearchorder}}|
  format-table * -autosize
