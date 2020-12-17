@@ -67,7 +67,7 @@ function Get-DiskInfo{
 ---------------------------------------"     
 
 $diskdrives = Get-CimInstance cim_diskdrive 
-foreach ($disk in $disksdrives){ 
+foreach ($disk in $diskdrives){ 
             $partitions = $disk|Get-CimAssociatedInstance -ResultClassName CIM_diskpartition 
                 foreach($partition in $partitions){
                     $logicaldisks = $partition | Get-CimAssociatedInstance -ResultClassName Cim_logicaldisk 
