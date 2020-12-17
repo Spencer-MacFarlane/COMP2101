@@ -1,0 +1,1 @@
+﻿Function get-cpuinfo {Get-CimInstance cim_processor | format-list -property name,manufacturer,model,currentclockspeed,maxclockspeed,numberoflogicalprocessors}
